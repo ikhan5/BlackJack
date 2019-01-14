@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Black Jack</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Artifika' rel='stylesheet'>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Black Jack</h1>
+    <div id="page-wrapper">
+        <div id="dealerScore" class="score"></div>
+        <div id="playerScore" class="score"></div>
+        <div class="flex-container">
+            <div id="gameArea">
+                <img id="dealer-img" src="cards/dealer.png" alt="dealer picture">
+                <div id="dealerArea"></div>
+                <div id="winnerArea"></div>
+                <div id="playerArea"></div>
+            </div>
+            <div id="playerActions">
+                <button class="button" id="hit-btn" disabled>Hit Me!</button>
+                <button class="button" id="hold-btn" disabled>Hold.</button>
+                <button class="button" ID="newgame-btn">New Game</button>
+                <div id="scoringArea">
+                    <div id="playerWins">
+                        <label>Player Wins:</label>
+                        <div class="count"></div>
+                    </div>
+                    <div id="dealerWins">
+                        <label>Dealer Wins:</label>
+                        <div class="count"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <form action="#" id="playerEntry">
+                <fieldset>
+                    <p>
+                        <input type="text" id="playerName" name="playerName" placeholder="Enter Player Name">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </div><!-- end of flex -->
+</body>
+
+</html>

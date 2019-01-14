@@ -1,0 +1,136 @@
+/*****Page layout******/
+html {
+    font-size: 16px;
+    background-color: black;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    background-image: url("cards/background.png");
+    background-size: cover;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+[class^="flex"] {
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-actions{
+    border: 1px solid black;
+    flex-flow: row nowrap;
+}
+
+#page-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    height: 1000px;
+    position: relative;
+    border: 1px solid green;
+}
+h1,.winnerText {
+    font-family: 'Artifika';
+    text-align: center;
+    font-size: 3em;
+}
+
+h1 {
+    color: #591E1E;
+}
+
+.winnerText {
+    color: black;
+}
+
+/******Playing Area ******/
+#gameArea {
+    height: 650px;
+}
+
+#playerArea, #dealerArea {
+    height: 320px;
+    width: 740px;
+    padding-bottom: 10px;
+}
+
+#playerActions {
+    display: block;
+}
+
+#winnerArea {
+    height: 50px; 
+    margin-bottom: 20px;
+}
+
+/*** Images *****/
+#playerArea img,
+#dealerArea img {
+    width: 120px;
+    height: 160px;
+}
+
+#dealer-img {
+    max-width: 100px !important;
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    float: right;
+}   
+
+/**** BUTTONS ****/
+.button {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-color: #FFEF19;
+    padding: 0.2em;
+    font-size: 1.2em;
+}
+
+.button:hover {
+    background-color: white;
+    color: grey;
+}
+
+/*****SCORE*****/
+.score{
+    background: #ddd;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    font-size: 2.8em;
+    padding-left:5px;
+}
+
+#playerScore, #dealerScore {
+    right:100px;
+}
+
+#dealerScore {
+    top: 250px;
+}
+#playerScore{
+    top: 400px;
+}
+
+/** Win Count **/
+.count{
+    background: #ddd;
+    width: 100px;
+    height: 20px;
+}
+
+/** Player Name **/
+#playerEntry{
+    float: right;
+}
