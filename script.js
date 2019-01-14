@@ -135,7 +135,6 @@ function pageLoaded() {
         var length = shuffledDeck.length - 1;
         while (i < shuffledDeck.length) {
             j = Math.floor(Math.random() * Math.floor(length - 1));
-            console.log(j);
             temp = shuffledDeck[j];
             shuffledDeck[j] = shuffledDeck[i];
             shuffledDeck[i] = temp;
