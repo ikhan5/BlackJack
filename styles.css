@@ -1,11 +1,14 @@
 /*****Page layout******/
 html {
     font-size: 16px;
-    background-color: black;
-    margin: 0 auto;
     /* overflow: hidden; */
-    background-image: url("cards/background.png");
-    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    z-index:-99999;
+    background-image: radial-gradient(circle,rgb(56, 49, 49) 15%, black 85%)
 }
 
 *,
@@ -33,11 +36,24 @@ html {
 }
 
 #page-wrapper {
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
-    height: 1000px;
+    height: 700px;
     position: relative;
     border: 1px solid green;
+    padding: 0;
+}
+
+#page-wrapper::after{
+    content: "";
+    position: absolute;
+    background: url(Poker-Table.svg);
+    top: 0;
+    left: 0;
+    height: 700px;
+    width: 100%;
+    background-size: 100% 100%;
+    z-index: -120000;
 }
 h1,.winnerText {
     font-family: 'Artifika';
@@ -55,14 +71,26 @@ h1 {
 
 /******Playing Area ******/
 #gameArea {
-    height: 650px;
+    margin-top: 50px;
+    height: 600px;
+    width: 110%;
+    border: solid 1px greenyellow;
+    position: relative;
 }
 
 #playerArea, #dealerArea {
-    height: 320px;
-    width: 740px;
+    position: absolute;
+    border: solid 1px yellow;
+    height: 100px;
+    width: 270px;
     padding-bottom: 10px;
 }
+
+#playerArea{
+    left: 40%;
+    bottom: 0;
+}
+
 
 #playerActions {
     display: block;
@@ -76,8 +104,8 @@ h1 {
 /*** Images *****/
 #playerArea img,
 #dealerArea img {
-    width: 120px;
-    height: 160px;
+    width: 60px;
+    height: 100px;
 }
 
 #dealer-img {
@@ -131,6 +159,3 @@ h1 {
 }
 
 /** Player Name **/
-#playerEntry{
-    float: right;
-}

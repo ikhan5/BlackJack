@@ -309,7 +309,6 @@ function pageLoaded() {
         gameOver();
     }
 
-
     /* Game over function ends the game */
     function gameOver() {
         disableActions();
