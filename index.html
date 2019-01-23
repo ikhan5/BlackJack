@@ -13,31 +13,36 @@
 <body>
     <h1>Black Jack</h1>
     <div id="page-wrapper">
-        <div id="dealerScore" class="score"></div>
-        <div id="playerScore" class="score"></div>
         <div class="flex-container">
-            <div id="gameArea">
-                <div id="dealerArea"></div>
-                <div id="winnerArea"></div>
-                <div id="playerArea"></div>
-            </div>
+            <img src="cards/Poker-Table-Green.svg" alt="Poker table" id="Poker-Table">
+            <div id="dealerScore" class="score"></div>
+            <div id="playerScore" class="score"></div>
+
+            <div id="dealerArea"></div>
+            <div id="winnerArea"></div>
+            <div id="playerArea"></div>
+            <div id="playerArea2"></div>
+            <div id="playerArea3"></div>
+
             <div id="playerActions">
                 <button class="button" id="hit-btn" disabled>Hit Me!</button>
                 <button class="button" id="hold-btn" disabled>Hold.</button>
                 <button class="button" id="newgame-btn">New Game</button>
-                <div id="scoringArea">
-                    <div>
-                        <label>Player Wins:</label>
-                        <div class="count"><span id="playerWins"></span></div>
-                    </div>
-                    <div>
-                        <label>Dealer Wins:</label>
-                        <div class="count"><span id="dealerWins"></span></div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div><!-- end of flex -->
+        </div><!-- end of flex -->
+
+        <!-- <div id="scoringArea">
+            <div>
+                <label>Player Wins:</label>
+                <div class="count"><span id="playerWins"></span></div>
+            </div>
+            <div>
+                <label>Dealer Wins:</label>
+                <div class="count"><span id="dealerWins"></span></div>
+            </div>
+        </div> -->
+
+    </div>
 </body>
 
 </html>

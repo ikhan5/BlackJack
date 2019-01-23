@@ -1,14 +1,12 @@
 /*****Page layout******/
 html {
     font-size: 16px;
-    /* overflow: hidden; */
     height: 100%;
     margin: 0;
 }
 
 body{
-    z-index:-99999;
-    background-image: radial-gradient(circle,rgb(56, 49, 49) 15%, black 85%)
+    background: black;
 }
 
 *,
@@ -26,8 +24,12 @@ body{
 
 .flex-container{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    border: solid 1px green;
+
 }
 
 .flex-actions{
@@ -38,23 +40,10 @@ body{
 #page-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    height: 700px;
-    position: relative;
-    border: 1px solid green;
+    border: solid 1px red;
     padding: 0;
 }
 
-#page-wrapper::after{
-    content: "";
-    position: absolute;
-    background: url(Poker-Table.svg);
-    top: 0;
-    left: 0;
-    height: 700px;
-    width: 100%;
-    background-size: 100% 100%;
-    z-index: -120000;
-}
 h1,.winnerText {
     font-family: 'Artifika';
     text-align: center;
@@ -70,30 +59,47 @@ h1 {
 }
 
 /******Playing Area ******/
-#gameArea {
-    margin-top: 50px;
-    height: 600px;
-    width: 110%;
-    border: solid 1px greenyellow;
-    position: relative;
+#Poker-Table{
+    max-width: 100%;
 }
 
-#playerArea, #dealerArea {
+ [id*="playerArea"], #dealerArea, #winnerArea {
     position: absolute;
     border: solid 1px yellow;
-    height: 100px;
-    width: 270px;
+    width: 335px;
     padding-bottom: 10px;
 }
 
-#playerArea{
-    left: 40%;
-    bottom: 0;
+#dealerArea{
+    top: 100px;
 }
 
+#playerArea{
+    left: 40px;
+    top: 42%;
+    transform: rotate(90deg);
+}
+
+#playerArea2{
+    left: 36%;
+    bottom: 100px;
+}
+
+#playerArea3{
+    right: 0; 
+    top: 45%;
+    transform: rotate(90deg);
+}
+
+#winnerArea{
+    top: 45%;
+    width: 400px;
+}
 
 #playerActions {
     display: block;
+    position: absolute;
+    bottom: 50px;
 }
 
 #winnerArea {
@@ -102,10 +108,10 @@ h1 {
 }
 
 /*** Images *****/
-#playerArea img,
+[id*="playerArea"] img,
 #dealerArea img {
-    width: 60px;
-    height: 100px;
+    width: 65px;
+    height: 95px;
 }
 
 #dealer-img {

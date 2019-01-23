@@ -99,7 +99,8 @@ function pageLoaded() {
     /** Playing Area elements **/
     var gamearea = document.getElementById('gameArea');
     var dealerarea = document.getElementById('dealerArea');
-    var playerarea = document.getElementById('playerArea');
+    var playerarea = document.querySelectorAll('[id*="playerArea"]');
+    /*0 - Player 1 (left) , 1 - Player 2 (bottom), 2 - Player 3 (right)*/
     var winnerarea = document.getElementById('winnerArea');
 
     /*Score Display */
@@ -118,6 +119,8 @@ function pageLoaded() {
         this.wins = wins;
     }
     var playerHand = new Player("Player 1", 0, 0, 0, 0);
+    var playerHand1 = new Player("Player 2", 0, 0, 0, 0);
+    var playerHand2 = new Player("Player 3", 0, 0, 0, 0);
     var dealerHand = new Player("Dealer", 0, 0, 0, 0);
 
 
@@ -153,10 +156,17 @@ function pageLoaded() {
     2) The card objects values are passed for comparison in the updatePlayerScore() function 
     */
     function playerCards() {
-        var playerCard = randomCard();
-        var cardSRC = dealCard(playerCard.cardimg);
-        playerarea.appendChild(cardSRC);
-        updatePlayerScore(playerCard.value, playerCard.secondValue);
+        let j =0;
+        while (j !=1){
+            let i = 0;
+            for(i=0;i <3;i++){
+                var playerCard = randomCard();
+                var cardSRC = dealCard(playerCard.cardimg);
+                playerarea[i].appendChild(cardSRC);
+                updatePlayerScore(playerCard.value, playerCard.secondValue, i);
+            }
+            j++;
+        }
     }
 
     function dealerCards() {
@@ -193,7 +203,9 @@ function pageLoaded() {
         shuffle(deck);
         gameStart();
         dealerarea.innerHTML = "";
-        playerarea.innerHTML = "";
+        playerarea[0].innerHTML = "";
+        playerarea[1].innerHTML = "";
+        playerarea[2].innerHTML = "";
         winnerarea.innerHTML = "";
         playerHand.firsttotal = 0;
         dealerHand.firsttotal = 0;
@@ -250,7 +262,7 @@ function pageLoaded() {
     }
     /*All the Aces have two separate values referred to as second total, when a card is dealt two totals are generated:
     firsttotal which is calculated if Ace were '1', secondtotal is calculated as if Ace were '11' */
-    function updatePlayerScore(first, second) {
+    function updatePlayerScore(first, second, playerID) {
         playerHand.firsttotal += first;
         playerHand.secondtotal += second || first;
         biggerTotal(playerHand);
@@ -326,6 +338,5 @@ function pageLoaded() {
 
 
 /*TO DO
-- Add player name near their hand area
-- Create a win counter for the player
+    - Isolate card totals to their respective player 
 */
