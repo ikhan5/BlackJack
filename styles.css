@@ -3,6 +3,7 @@ html {
     font-size: 16px;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body{
@@ -28,8 +29,6 @@ body{
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
-    border: solid 1px green;
-
 }
 
 .flex-actions{
@@ -40,7 +39,6 @@ body{
 #page-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    border: solid 1px red;
     padding: 0;
 }
 
@@ -65,8 +63,7 @@ h1 {
 
  [id*="playerArea"], #dealerArea, #winnerArea {
     position: absolute;
-    border: solid 1px yellow;
-    width: 335px;
+    width: 500px;
     padding-bottom: 10px;
 }
 
@@ -75,20 +72,8 @@ h1 {
 }
 
 #playerArea{
-    left: 40px;
-    top: 42%;
-    transform: rotate(90deg);
-}
-
-#playerArea2{
-    left: 36%;
+    left: 33%;
     bottom: 100px;
-}
-
-#playerArea3{
-    right: 0; 
-    top: 45%;
-    transform: rotate(90deg);
 }
 
 #winnerArea{
@@ -110,8 +95,8 @@ h1 {
 /*** Images *****/
 [id*="playerArea"] img,
 #dealerArea img {
-    width: 65px;
-    height: 95px;
+    width: 80px;
+    height: 130px;
 }
 
 #dealer-img {
