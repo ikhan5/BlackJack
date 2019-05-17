@@ -120,7 +120,6 @@ function pageLoaded() {
     var playerHand = new Player("Player 1", 0, 0, 0, 0);
     var dealerHand = new Player("Dealer", 0, 0, 0, 0);
 
-
     /** Card Function **/
 
     /* Fischer-Yates Shuffling Method
@@ -153,7 +152,6 @@ function pageLoaded() {
     2) The card objects values are passed for comparison in the updatePlayerScore() function 
     */
     function playerCards() {
-
         var playerCard = randomCard();
         var cardSRC = dealCard(playerCard.cardimg);
         playerarea.appendChild(cardSRC);
@@ -172,6 +170,7 @@ function pageLoaded() {
     function dealCard(cardimg) {
         var card = document.createElement("IMG");
         card.src = cardimg;
+        card.classList.add("card")
         return card;
     }
     /*Used to create the flipped over card of the dealers hand*/
