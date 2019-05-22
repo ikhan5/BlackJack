@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-image: url("cards/Poker-Table-Green.svg");
+    background-image: url("cards/GreenBack.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,13 +75,13 @@ h1 {
 #dealerArea,
 #winnerArea {
     position: absolute;
-    width: 500px;
+    /* width: 700px; */
     padding-bottom: 10px;
 }
 
 #dealerArea,
 #playerArea {
-    left: 35%;
+    left: 25%;
 }
 
 #dealerArea {
@@ -103,6 +103,13 @@ h1 {
     bottom: 0;
 }
 
+#playerActions button {
+    width: 120px;
+    border-radius: 25px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
 #winnerArea {
     height: 50px;
     margin-bottom: 20px;
@@ -115,8 +122,8 @@ h1 {
 /*** Images *****/
 .card,
 .coverCard {
-    width: 6vw;
-    height: 20vh;
+    width: 8vw;
+    height: 25vh;
 }
 
 #dealer-img {
@@ -154,7 +161,7 @@ h1 {
 
 #playerScore,
 #dealerScore {
-    left: 15%;
+    left: 5%;
 }
 
 #dealerScore {
@@ -163,6 +170,10 @@ h1 {
 
 #playerScore {
     bottom: 20%;
+}
+
+#scoringArea {
+    display: none;
 }
 
 /** Win Count **/
@@ -192,19 +203,42 @@ h1 {
 
     .card,
     .coverCard {
-        width: 10vw;
+        width: 12vw;
         height: 20vh;
+    }
+
+    #dealerScore {
+        top: 35%;
+    }
+
+    #playerScore {
+        bottom: 36%;
+    }
+
+    #dealerArea,
+    #playerArea {
+        left: 10%;
     }
 }
 
 
 @media screen and (max-width:500px) {
 
-    #dealerArea,
-    #playerArea {
-        left: 40%;
+    .card,
+    .coverCard {
+        width: 16vw;
+        height: 18vh;
     }
 
-}
+    #dealerArea,
+    #playerArea {
+        left: 1%;
+    }
 
-@media screen and (max-width: 370px) {}
+    #playerActions button {
+        width: 100px;
+        padding: 2px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
