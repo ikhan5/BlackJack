@@ -1,249 +1,243 @@
 /*****Page layout******/
 html {
-    font-size: 16px;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    background: black;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: black;
 }
 
 body {
-    background-image: url("cards/GreenBack.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    position: relative;
+  background-image: url("cards/GreenBack.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
 }
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 [class^="flex"] {
-    display: flex;
-    max-width: 980px;
-    margin: 0 auto;
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .flex-container {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
 }
 
 .flex-actions {
-    border: 1px solid black;
-    flex-flow: row nowrap;
+  border: 1px solid black;
+  flex-flow: row nowrap;
 }
 
 #page-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 h1,
 .winnerText {
-    font-family: 'Artifika';
-    text-align: center;
-    font-size: 3em;
+  font-family: "Artifika";
+  text-align: center;
+  font-size: 3em;
 }
 
 h1 {
-    color: rgb(151, 31, 31);
+  background-color: black;
+  color: rgb(151, 31, 31);
 }
 
 .winnerText {
-    color: black;
+  color: white;
 }
 
 /******Playing Area ******/
 
 .game-container {
-    position: relative;
-    max-width: 100%;
-    height: 90vh;
-    min-width: 100%;
+  position: relative;
+  max-width: 100%;
+  height: 90vh;
+  min-width: 100%;
 }
 
 [id*="playerArea"],
 #dealerArea,
 #winnerArea {
-    position: absolute;
-    /* width: 700px; */
-    padding-bottom: 10px;
+  position: absolute;
+  /* width: 700px; */
+  padding-bottom: 10px;
 }
 
 #dealerArea,
 #playerArea {
-    left: 25%;
+  left: 25%;
 }
 
 #dealerArea {
-    top: 10%;
+  top: 10%;
 }
 
 #playerArea {
-    bottom: 10%;
+  bottom: 10%;
 }
 
 #winnerArea {
-    top: 45%;
-    width: 400px;
+  top: 45%;
+  width: 400px;
 }
 
 #playerActions {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
 }
 
 #playerActions button {
-    width: 120px;
-    border-radius: 25px;
-    padding: 5px;
-    margin-left: 10px;
+  width: 120px;
+  border-radius: 25px;
+  padding: 5px;
+  margin-left: 10px;
 }
 
 #winnerArea {
-    height: 50px;
-    margin-bottom: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  height: 50px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*** Images *****/
 .card,
 .coverCard {
-    width: 8vw;
-    height: 25vh;
+  width: 8vw;
+  height: 25vh;
 }
 
 #dealer-img {
-    max-width: 100px !important;
-    width: 100px;
-    height: 100px;
-    margin: 0 5px;
-    float: right;
+  max-width: 100px !important;
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+  float: right;
 }
 
 /**** BUTTONS ****/
 .button {
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    background-color: #FFEF19;
-    padding: 0.2em;
-    font-size: 1.2em;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  background-color: #ffef19;
+  padding: 0.2em;
+  font-size: 1.2em;
 }
 
 .button:hover {
-    background-color: white;
-    color: grey;
+  background-color: white;
+  color: grey;
 }
 
 /*****SCORE*****/
 .score {
-    background: #ddd;
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    font-size: 2.8em;
-    padding-left: 5px;
+  background: #ddd;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  font-size: 2.8em;
+  padding-left: 5px;
 }
-
 
 #playerScore,
 #dealerScore {
-    left: 5%;
+  left: 5%;
 }
 
 #dealerScore {
-    top: 10%;
+  top: 10%;
 }
 
 #playerScore {
-    bottom: 20%;
+  bottom: 20%;
 }
 
 #scoringArea {
-    display: none;
+  display: none;
 }
 
 /** Win Count **/
 .count {
-    background: #ddd;
-    width: 100px;
-    height: 20px;
+  background: #ddd;
+  width: 100px;
+  height: 20px;
 }
 
-@media screen and (max-width:910px) {
-    .winnerText {
-        font-size: 2em;
-    }
+@media screen and (max-width: 910px) {
+  .winnerText {
+    font-size: 2em;
+  }
 
-    .card,
-    .coverCard {
-        width: 10vw;
-        height: 20vh;
-    }
+  .card,
+  .coverCard {
+    width: 13vw;
+  }
 }
 
+@media screen and (max-width: 675px) {
+  .winnerText {
+    font-size: 3em;
+  }
 
-@media screen and (max-width:675px) {
-    .winnerText {
-        font-size: 3em;
-    }
+  .card,
+  .coverCard {
+    height: 150px;
+  }
 
-    .card,
-    .coverCard {
-        width: 12vw;
-        height: 20vh;
-    }
+  #dealerScore {
+    top: 35%;
+  }
 
-    #dealerScore {
-        top: 35%;
-    }
+  #playerScore {
+    bottom: 36%;
+  }
 
-    #playerScore {
-        bottom: 36%;
-    }
-
-    #dealerArea,
-    #playerArea {
-        left: 10%;
-    }
+  #dealerArea,
+  #playerArea {
+    left: 10%;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  .card,
+  .coverCard {
+    width: 70px;
+  }
 
-@media screen and (max-width:500px) {
+  #dealerArea,
+  #playerArea {
+    left: 1%;
+  }
 
-    .card,
-    .coverCard {
-        width: 50px;
-        height: 100px;
-    }
+  #playerActions {
+    bottom: 0;
+  }
 
-    #dealerArea,
-    #playerArea {
-        left: 1%;
-    }
-
-    #playerActions {
-        bottom: 0;
-    }
-
-    #playerActions button {
-        width: 80px;
-        padding: 2px;
-        margin-left: 0;
-        font-size: 14px;
-    }
+  #playerActions button {
+    width: 80px;
+    padding: 2px;
+    margin-left: 0;
+    font-size: 14px;
+  }
 }
